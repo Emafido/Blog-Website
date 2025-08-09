@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="img/8767132.jpg" type="image/x-icon" />
+    <title>Account Created</title>
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #43cea2, #185a9d);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        font-family: "Inter", sans-serif;
+        color: white;
+      }
+      .tick {
+        width: 120px;
+        height: 120px;
+        background-color: #28a745;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation: pop 0.5s ease-out;
+      }
+      .tick svg {
+        width: 70px;
+        height: 70px;
+        stroke: white;
+        stroke-width: 6;
+        fill: none;
+        stroke-linecap: round;
+        stroke-linejoin: round;
+      }
+      h1 {
+        margin-top: 20px;
+        font-size: 1.8rem;
+        text-align: center;
+      }
+      @keyframes pop {
+        0% {
+          transform: scale(0.5);
+          opacity: 0;
+        }
+        100% {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tick">
+      <svg viewBox="0 0 52 52">
+        <path d="M14 27l7 7 17-17"></path>
+      </svg>
+    </div>
+    <h1>Account Successfully Created</h1>
+
+    <script>
+      // Redirect after 2 seconds
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 2000);
+    </script>
+  </body>
+</html>

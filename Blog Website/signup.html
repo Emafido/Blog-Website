@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sign Up</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <link rel="shortcut icon" href="img/8767132.jpg" type="image/x-icon" />
+
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap");
+
+      body {
+        margin: 0;
+        height: 100vh;
+        background: linear-gradient(135deg, #667eea, #764ba2);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: "Inter", sans-serif;
+      }
+
+      .container {
+        background: rgba(255, 255, 255, 0.1);
+        border-radius: 15px;
+        padding: 2rem;
+        width: 350px;
+        backdrop-filter: blur(15px);
+        box-shadow: 0 8px 32px rgba(0, 0, 0, 0.25);
+        text-align: center;
+        color: white;
+      }
+
+      .container h2 {
+        margin-bottom: 1rem;
+        font-weight: 600;
+      }
+
+      .input-group {
+        text-align: left;
+        margin-bottom: 1rem;
+      }
+
+      .input-group label {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 5px;
+      }
+
+      .input-group input {
+        width: 100%;
+        padding: 0.6rem;
+        border-radius: 8px;
+        border: none;
+        outline: none;
+        font-size: 1rem;
+      }
+
+      .signup-btn {
+        width: 100%;
+        padding: 0.7rem;
+        background: #4cafef;
+        border: none;
+        color: white;
+        font-size: 1rem;
+        font-weight: bold;
+        border-radius: 8px;
+        cursor: pointer;
+        transition: 0.3s;
+      }
+
+      .signup-btn:hover {
+        background: #1e90ff;
+      }
+
+      .social-buttons {
+        margin-top: 1rem;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .social-buttons button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        padding: 0.6rem;
+        border: none;
+        border-radius: 8px;
+        cursor: pointer;
+        font-weight: 500;
+        font-size: 0.95rem;
+      }
+
+      .facebook {
+        background: #3b5998;
+        color: white;
+      }
+
+      .google {
+        background: white;
+        color: black;
+        border: 1px solid #ccc;
+      }
+
+      .error {
+        display: none;
+        margin-top: 0.5rem;
+        color: #ff6b6b;
+        font-size: 0.85rem;
+      }
+
+      .signin-link {
+        margin-top: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .signin-link a {
+        color: #00e5ff;
+        text-decoration: none;
+      }
+
+      .signin-link a:hover {
+        text-decoration: underline;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Create an Account</h2>
+
+      <div class="input-group">
+        <label for="email">Email</label>
+        <input
+          type="email"
+          id="email"
+          placeholder="Enter your email"
+          required
+        />
+      </div>
+
+      <div class="input-group">
+        <label for="password">Password</label>
+        <input
+          type="password"
+          id="password"
+          placeholder="Enter your password"
+          required
+        />
+      </div>
+
+      <button class="signup-btn" id="signup-btn">Sign Up</button>
+      <p class="error" id="error-msg">Please fill in all fields.</p>
+
+      <hr
+        style="margin: 1.5rem 0; border: 0.5px solid rgba(255, 255, 255, 0.2)"
+      />
+
+      <div class="social-buttons">
+        <button class="facebook">
+          <i class="fab fa-facebook"></i> Continue with Facebook
+        </button>
+        <button class="google">
+          <i class="fab fa-google"></i> Continue with Google
+        </button>
+      </div>
+
+      <p class="signin-link">
+        Already have an account? <a href="login.html">Login</a>
+      </p>
+    </div>
+
+    <script>
+      document
+        .getElementById("signup-btn")
+        .addEventListener("click", function () {
+          const email = document.getElementById("email").value.trim();
+          const password = document.getElementById("password").value.trim();
+          const errorMsg = document.getElementById("error-msg");
+
+          if (email === "" || password === "") {
+            errorMsg.style.display = "block";
+          } else {
+            errorMsg.style.display = "none";
+            window.location.href = "success.html";
+          }
+        });
+    </script>
+  </body>
+</html>

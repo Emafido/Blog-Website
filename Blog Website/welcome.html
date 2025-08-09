@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Welcome Back</title>
+    <link rel="shortcut icon" href="img/8767132.jpg" type="image/x-icon" />
+    <style>
+      body {
+        margin: 0;
+        font-family: "Inter", sans-serif;
+        background: linear-gradient(135deg, #11998e, #38ef7d);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        color: white;
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 3rem 4rem;
+        border-radius: 20px;
+        backdrop-filter: blur(10px);
+        text-align: center;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        animation: pop 0.5s ease forwards;
+      }
+      @keyframes pop {
+        from {
+          transform: scale(0.8);
+          opacity: 0;
+        }
+        to {
+          transform: scale(1);
+          opacity: 1;
+        }
+      }
+      .tick {
+        font-size: 4rem;
+        color: #00ff88;
+        margin-bottom: 1rem;
+      }
+      h1 {
+        font-size: 1.8rem;
+        margin: 0;
+      }
+      p {
+        opacity: 0.8;
+        margin-top: 0.5rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glass">
+      <div class="tick">✔</div>
+      <h1>Welcome Back!</h1>
+      <p>Redirecting to your dashboard...</p>
+    </div>
+
+    <script>
+      setTimeout(() => {
+        window.location.href = "index.html";
+      }, 3000);
+    </script>
+  </body>
+</html>
